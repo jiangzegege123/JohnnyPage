@@ -18,7 +18,7 @@ export default function HudBar() {
   return (
     <header className="absolute top-0 w-full flex justify-center pt-8">
       <div className="glass-panel hud-bar pointer-events-auto">
-        <span>▲ SYDNEY, AU</span>
+        <span><span className="text-accent">▲</span> SYDNEY, AU</span>
         <span>{time}</span>
       </div>
     </header>

@@ -2,11 +2,11 @@
 
 import dynamic from "next/dynamic";
 import { useState } from "react";
-import AboutView from "./components/AboutView";
-import HomeView from "./components/HomeView";
+import AboutView from "./components/about/AboutView";
+import HomeView from "./components/home/HomeView";
 import HudBar from "./components/HudBar";
 import Navbar from "./components/Navbar";
-import ProjectsView from "./components/ProjectsView";
+import ProjectsView from "./components/projects/ProjectsView";
 
 const WebGLBackground = dynamic(
   () => import("./components/WebGLBackground"),

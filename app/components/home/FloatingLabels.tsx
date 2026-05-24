@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { SKILLS } from '../data/skills';
+import { SKILLS } from '../../data/skills';
 
 const SWAP_INTERVAL = 3200; // ms between each swap
 const FADE_MS = 480;        // fade-out / fade-in duration
@@ -72,8 +72,8 @@ export default function FloatingLabels() {
         const exiting  = isMobile && exitingIdx === i;
         const hidden   = !visible || exiting;
 
+        // Outer wrapper: absolute position + fade-in / fade-out transition
         return (
-          {/* Outer wrapper: absolute position + fade-in / fade-out transition */}
           <div
             key={skill.label}
             style={{
