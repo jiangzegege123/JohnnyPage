@@ -1,0 +1,26 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
+export default function HudBar() {
+  const [time, setTime] = useState("");
+
+  useEffect(() => {
+    const tick = () =>
+      setTime(new Date().toLocaleTimeString("en-US", {
+        hour12: false, hour: "2-digit", minute: "2-digit", second: "2-digit",
+      }));
+    tick();
+    const id = setInterval(tick, 1000);
+    return () => clearInterval(id);
+  }, []);
+
+  return (
+    <header className="absolute top-0 w-full flex justify-center pt-8">
+      <div className="glass-panel hud-bar pointer-events-auto">
+        <span>▲ SYDNEY, AU</span>
+        <span>{time}</span>
+      </div>
+    </header>
+  );
+}

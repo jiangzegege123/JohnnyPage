@@ -100,9 +100,9 @@ export default function WebGLBackground({ activeView }: Props) {
   // Update target when the view changes
   useEffect(() => {
     const config: Record<View, { x: number; y: number; z: number; scale: number }> = {
-      home:     { x: 0, y: 0,  z: 0, scale: 1.0 },
-      projects: { x: 0, y: 3,  z: 0, scale: 0.8 },
-      about:    { x: 0, y: 0,  z: 0, scale: 1.2 },
+      home:     { x: 0, y: 1.5, z: 0, scale: 1.0 },
+      projects: { x: 0, y: 4.5, z: 0, scale: 0.8 },
+      about:    { x: 0, y: 1.5, z: 0, scale: 1.2 },
     };
     targetRef.current = config[activeView];
   }, [activeView]);

@@ -7,11 +7,11 @@ const PROJECTS = [
   { num: "04", env: "ARCHIVE",  date: "2023.11", title: "Asset Pipeline", stack: ["PYTHON", "AWS"]      },
 ];
 
-interface Props {
-  onWheel: (e: React.WheelEvent<HTMLDivElement>) => void;
-}
-
-export default function ProjectsView({ onWheel }: Props) {
+export default function ProjectsView() {
+  const onWheel = (e: React.WheelEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.currentTarget.scrollLeft += e.deltaY;
+  };
   return (
     <div className="absolute bottom-[15%] w-full px-[5vw] flex flex-col gap-5">
       <div className="projects-header">LATEST DEPLOYMENTS</div>

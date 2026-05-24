@@ -32,6 +32,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* ─── Floating label drift animation ─────────────────────────────────────── */
+@keyframes float {
+  0%,  100% { transform: translateY(0px)   translateX(0px);  }
+  25%        { transform: translateY(-7px)  translateX(3px);  }
+  50%        { transform: translateY(-4px)  translateX(-4px); }
+  75%        { transform: translateY(5px)   translateX(2px);  }
+}
+
 /* ─── Component classes ───────────────────────────────────────────────────── */
 
 /* Glass morphism card / panel */
