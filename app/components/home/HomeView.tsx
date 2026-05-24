@@ -13,7 +13,9 @@ export default function HomeView() {
           Johnny Zhou
         </h1>
         <p className="text-[11px] font-medium text-muted tracking-[0.1em] uppercase">
-          Full-Stack Engineer &mdash; From server to screen
+          Full-Stack Engineer &mdash; From server to screen&nbsp;
+          <span className="text-white/30">/</span>
+          &nbsp;Also that guy on the court
         </p>
       </div>
     </>
