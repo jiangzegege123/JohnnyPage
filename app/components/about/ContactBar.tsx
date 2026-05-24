@@ -47,7 +47,7 @@ const ICONS: Record<ContactLink["icon"], () => React.ReactElement> = {
 
 export default function ContactBar() {
   return (
-    <div className="glass-panel px-8 py-5 flex items-center justify-between gap-4 max-md:flex-wrap max-md:justify-center max-md:gap-3">
+    <div className="glass-panel px-8 py-5 max-md:px-4 max-md:py-3 flex items-center justify-between gap-4 max-md:flex-wrap max-md:justify-center max-md:gap-2">
       <span className="text-[10px] font-semibold tracking-[0.12em] text-muted uppercase flex-shrink-0">
         Contact
       </span>
@@ -64,9 +64,9 @@ export default function ContactBar() {
               target={link.icon !== "email" ? "_blank" : undefined}
               rel="noreferrer"
               className={[
-                "flex items-center gap-2 px-4 py-2 rounded-full",
+                "flex items-center gap-2 px-4 py-2 max-md:px-3 max-md:py-1.5 rounded-full",
                 "border border-white/[0.08] text-white/50",
-                "text-[11px] font-semibold tracking-[0.06em] uppercase",
+                "text-[11px] max-md:text-[10px] font-semibold tracking-[0.06em] uppercase",
                 "hover:border-accent/40 hover:text-accent hover:bg-accent/[0.06]",
                 "transition-all duration-250 pointer-events-auto",
               ].join(" ")}

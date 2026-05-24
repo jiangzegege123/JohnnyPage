@@ -15,7 +15,7 @@ export default function AboutCard({ section: s }: { section: AboutSection }) {
     <div className="glass-panel flex flex-col overflow-hidden">
       {/* Photo strip */}
       {s.image && (
-        <div className="relative h-32 w-full flex-shrink-0">
+        <div className="relative h-32 max-md:h-20 w-full flex-shrink-0">
           <Image
             src={s.image}
             alt={s.tag}
@@ -28,11 +28,11 @@ export default function AboutCard({ section: s }: { section: AboutSection }) {
       )}
 
       {/* Card body */}
-      <div className="flex flex-col gap-4 p-8 pt-5">
+      <div className="flex flex-col gap-3 p-8 pt-5 max-md:p-5 max-md:pt-3">
         <h2 className="text-xs text-accent font-semibold tracking-[0.1em] uppercase">
           {s.tag}
         </h2>
-        <p className="text-sm leading-relaxed text-[#d0d0d0]">
+        <p className="text-sm leading-relaxed text-[#d0d0d0] max-md:text-xs max-md:leading-relaxed">
           {s.body}
         </p>
         {s.stats.map((st) => (

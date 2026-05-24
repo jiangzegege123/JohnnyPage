@@ -52,6 +52,15 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
+/* On mobile the WebGL background bleeds through too strongly — increase opacity */
+@media (max-width: 767px) {
+  .glass-panel {
+    background: rgba(18, 18, 20, 0.88);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+  }
+}
+
 /* Inline ■ decoration */
 .square-bullet::before {
   content: "■";
