@@ -24,7 +24,7 @@ export const ABOUT_SECTIONS: AboutSection[] = [
       { label: "COORD",  value: "31.2304° N, 121.4737° E" },
       { label: "LOCALE", value: "PVG → GLOBAL" },
     ],
-    image: "/images/about-origin.png",
+    image: "/images/aboutme1.png",
   },
   {
     tag:  "Discipline / Court",
@@ -33,13 +33,13 @@ export const ABOUT_SECTIONS: AboutSection[] = [
       { label: "FIRST SERVE", value: "118 MPH" },
       { label: "STYLE",       value: "AGGRESSIVE BASELINER" },
     ],
-    image: "/images/about-discipline.png",
+    image: "/images/aboutme2.png",
   },
 ];
 
 export const CONTACT_LINKS: ContactLink[] = [
-  { platform: "GitHub",    href: "https://github.com/johnnyzhou",          icon: "github"    },
+  { platform: "GitHub",    href: "https://github.com/jiangzegege123",       icon: "github"    },
   { platform: "LinkedIn",  href: "https://linkedin.com/in/johnnyzhou",     icon: "linkedin"  },
-  { platform: "Instagram", href: "https://instagram.com/johnnyzhou",       icon: "instagram" },
-  { platform: "Email",     href: "mailto:johnny.zhou@socoro.com.au",       icon: "email"     },
+  { platform: "Instagram", href: "https://www.instagram.com/johnny____zhou/", icon: "instagram" },
+  { platform: "Email",     href: "mailto:zhoujiangze417@gmail.com",        icon: "email"     },
 ];

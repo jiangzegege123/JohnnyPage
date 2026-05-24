@@ -43,6 +43,12 @@ const ICONS: Record<ContactLink["icon"], () => React.ReactElement> = {
   email:     IconEmail,
 };
 
+// ── Helpers ───────────────────────────────────────────────────────────────────
+
+function displayUrl(href: string): string {
+  return href.replace(/^mailto:/, "").replace(/^https?:\/\/(www\.)?/, "");
+}
+
 // ── Component ─────────────────────────────────────────────────────────────────
 
 export default function ContactBar() {
@@ -64,7 +70,7 @@ export default function ContactBar() {
               target={link.icon !== "email" ? "_blank" : undefined}
               rel="noreferrer"
               className={[
-                "flex items-center gap-2 px-4 py-2 max-md:px-3 max-md:py-1.5 rounded-full",
+                "group relative flex items-center gap-2 px-4 py-2 max-md:px-3 max-md:py-1.5 rounded-full",
                 "border border-white/[0.08] text-white/50",
                 "text-[11px] max-md:text-[10px] font-semibold tracking-[0.06em] uppercase",
                 "hover:border-accent/40 hover:text-accent hover:bg-accent/[0.06]",
@@ -73,6 +79,17 @@ export default function ContactBar() {
             >
               <Icon />
               {link.platform}
+
+              {/* Tooltip */}
+              <span className={[
+                "pointer-events-none absolute -top-9 left-1/2 -translate-x-1/2",
+                "whitespace-nowrap rounded px-2.5 py-1",
+                "bg-[#1a1a1e] border border-white/10 shadow-lg",
+                "text-[10px] normal-case tracking-normal font-normal text-white/70",
+                "opacity-0 group-hover:opacity-100 transition-opacity duration-200",
+              ].join(" ")}>
+                {displayUrl(link.href)}
+              </span>
             </a>
           );
         })}
