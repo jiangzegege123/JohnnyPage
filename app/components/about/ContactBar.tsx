@@ -1,4 +1,5 @@
-import { CONTACT_LINKS, ContactLink } from "../../data/about";
+import React from "react";
+import { CONTACT_LINKS, type ContactLink } from "../../data/about";
 
 // ── Inline SVG icons ──────────────────────────────────────────────────────────
 
@@ -35,7 +36,7 @@ function IconEmail() {
   );
 }
 
-const ICONS: Record<ContactLink["icon"], () => JSX.Element> = {
+const ICONS: Record<ContactLink["icon"], () => React.ReactElement> = {
   github:    IconGitHub,
   linkedin:  IconLinkedIn,
   instagram: IconInstagram,

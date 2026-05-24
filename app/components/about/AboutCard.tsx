@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { AboutSection } from "../../data/about";
+import { type AboutSection } from "../../data/about";
 
 function StatRow({ label, value }: { label: string; value: string }) {
   return (
