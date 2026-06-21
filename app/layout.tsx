@@ -8,8 +8,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Systems / Architecture",
-  description: "Engineering portfolio — high-performance digital systems",
+  title: "Johnny's Page",
+  description: "Beautiful Baby! Come on and visit😊😊",
+  icons: {
+    icon: "/images/icon.jpg",
+    shortcut: "/images/icon.jpg",
+    apple: "/images/icon.jpg",
+  },
 };
 
 export default function RootLayout({
