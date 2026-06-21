@@ -26,30 +26,31 @@ export default function ProjectCard({ project: p, onOpen }: Props) {
             src={p.cardImage}
             alt={p.title}
             fill
-            className="object-cover opacity-20"
+            className="project-card-image opacity-20"
           />
         </div>
       )}
 
       {/* Env / date */}
-      <div className="flex justify-between text-[10px] font-medium text-muted tracking-[0.05em]">
+      <div className="project-card-header flex justify-between text-[10px] font-medium text-muted tracking-[0.05em]">
         <span>{p.env}</span>
         <span>{p.date}</span>
       </div>
 
       {/* Title + stack */}
-      <div>
+      <div className="project-card-body">
         <h3 className="text-xl font-extrabold tracking-[-0.02em] mb-2 text-white">
           {p.title}
         </h3>
-        <p className="mb-3 max-w-[24ch] text-sm leading-relaxed text-white/75">
+        <p className="project-card-tagline mb-3 max-w-[24ch] text-sm leading-relaxed text-white/75">
           {p.tagline}
         </p>
-        <div className="project-card-stack text-[10px] text-muted">
-          {p.stack.map((s) => (
-            <span key={s} className="square-bullet">{s}</span>
-          ))}
-        </div>
+      </div>
+
+      <div className="project-card-stack text-[10px] text-muted">
+        {p.stack.slice(0, 6).map((s) => (
+          <span key={s} className="square-bullet">{s}</span>
+        ))}
       </div>
     </button>
   );

@@ -77,13 +77,14 @@ export const PROJECTS: Project[] = [
       { label: "Company Site", url: "https://www.quarrylink.com.au/" },
     ],
     mediaLink: "https://www.quarrylink.com.au/",
+    cardImage: "/images/quarrylink-card.png",
     detailImage: "/images/quarrylink-detail-portrait.png",
     detailImageMobile: "/images/quarrylink-detail-landscape.png",
   },
   {
     num:   "02",
     env:   "FULL_STACK_PLATFORM",
-    date:  "2025",
+    date:  "2026.04-PRESENT",
     title: "PetBoard",
     tagline: "Full-stack pet boarding management platform for bookings, pets, invoices, and operations.",
     highlights: [
@@ -109,13 +110,14 @@ export const PROJECTS: Project[] = [
       { label: "Frontend Repo", url: "https://github.com/jiangzegege123/petboard-next" },
       { label: "Backend Repo", url: "https://github.com/jiangzegege123/petboard-service" },
     ],
+    cardImage: "/images/petboard-card.png",
     detailImage: "/images/petboard-detail-portrait.png",
     detailImageMobile: "/images/petboard-detail-landscape.png",
   },
   {
     num:   "03",
     env:   "PERSONAL_PORTFOLIO",
-    date:  "2026",
+    date:  "2026.02-PRESENT",
     title: "JohnnyPage",
     tagline: "Interactive developer portfolio built with modern Next.js, motion, and 3D scene transitions.",
     highlights: [
@@ -141,8 +143,8 @@ export const PROJECTS: Project[] = [
       { label: "GitHub Repo", url: "https://github.com/jiangzegege123/JohnnyPage" },
     ],
     cardImage: "/images/johnnypage-detail-landscape.png",
-    detailImage: "/images/johnnypage-detail-landscape.png",
-    detailImageMobile: "/images/johnnypage-detail-portrait.png",
+    detailImage: "/images/johnnypage-detail-portrait.png",
+    detailImageMobile: "/images/johnnypage-detail-landscape.png",
   },
   {
     num:   "04",
