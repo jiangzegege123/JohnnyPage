@@ -24,7 +24,7 @@ export default function ProjectsView() {
         src={selectedProject.detailImage}
         alt={selectedProject.title}
         fill
-        className={`object-cover ${selectedProject.detailImageMobile ? "max-[900px]:hidden" : ""}`}
+        className={`object-cover object-top ${selectedProject.detailImageMobile ? "max-[900px]:hidden" : ""}`}
         sizes="(max-width: 900px) 100vw, 42vw"
       />
       {selectedProject.detailImageMobile && (
@@ -32,7 +32,7 @@ export default function ProjectsView() {
           src={selectedProject.detailImageMobile}
           alt={selectedProject.title}
           fill
-          className="hidden object-cover max-[900px]:block"
+          className="hidden object-cover object-top max-[900px]:block"
           sizes="100vw"
         />
       )}
