@@ -114,27 +114,35 @@ export const PROJECTS: Project[] = [
   },
   {
     num:   "03",
-    env:   "INTERNAL",
-    date:  "2024.05",
-    title: "Court Tracker",
-    tagline: "Operational case monitoring for legal workflow teams.",
+    env:   "PERSONAL_PORTFOLIO",
+    date:  "2026",
+    title: "JohnnyPage",
+    tagline: "Interactive developer portfolio built with modern Next.js, motion, and 3D scene transitions.",
     highlights: [
       {
-        emphasis: "Centralized case timelines:",
-        text: "Centralized case timelines, filing states, and assignment ownership.",
+        emphasis: "Single-page portfolio experience:",
+        text: "Built a portfolio site with distinct Home, Projects, and About views, using animated transitions and a custom visual system instead of a template-style landing page.",
       },
       {
-        emphasis: "Deadline surfacing:",
-        text: "Introduced deadline surfacing for hearings, filings, and escalations.",
+        emphasis: "3D and motion-driven interface:",
+        text: "Integrated a dynamic Three.js background with view-based camera and composition changes to give each section a more immersive identity.",
       },
       {
-        emphasis: "Cross-team handoff:",
-        text: "Streamlined cross-team handoff with searchable matter-level history.",
+        emphasis: "Interactive project showcase:",
+        text: "Implemented clickable project cards, responsive detail modals, adaptive image layouts, external links, and richer project storytelling for portfolio case studies.",
+      },
+      {
+        emphasis: "Modern frontend foundation:",
+        text: "Built the app with Next.js 16, React 19, TypeScript, Tailwind CSS 4, and modular client components for navigation, animated labels, and view-specific UI blocks.",
       },
     ],
-    stack: ["NODE", "POSTGRES"],
-    cardImage: "/images/court-tracker.png",
-    detailImage: "/images/court-tracker.png",
+    stack: ["NEXT.JS", "REACT", "TYPESCRIPT", "TAILWIND", "THREE.JS"],
+    links: [
+      { label: "GitHub Repo", url: "https://github.com/jiangzegege123/JohnnyPage" },
+    ],
+    cardImage: "/images/johnnypage-detail-landscape.png",
+    detailImage: "/images/johnnypage-detail-landscape.png",
+    detailImageMobile: "/images/johnnypage-detail-portrait.png",
   },
   {
     num:   "04",
