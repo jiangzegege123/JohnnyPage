@@ -18,6 +18,24 @@ export default function ProjectsView() {
     setSelectedProject(null);
   };
 
+  const mediaContent = selectedProject?.detailImage ? (
+    <>
+      <Image
+        src={selectedProject.detailImage}
+        alt={selectedProject.title}
+        fill
+        className="object-cover"
+        sizes="(max-width: 900px) 100vw, 42vw"
+      />
+      <div className="project-modal-media-overlay" />
+      {selectedProject.link && (
+        <div className="project-modal-media-hint">OPEN SITE</div>
+      )}
+    </>
+  ) : (
+    <div className="project-modal-media-overlay" />
+  );
+
   const handleEscape = useEffectEvent((event: KeyboardEvent) => {
     if (event.key === "Escape") {
       closeModal();
@@ -76,18 +94,21 @@ export default function ProjectsView() {
               CLOSE
             </button>
 
-            <div className="project-modal-media">
-              {selectedProject.image && (
-                <Image
-                  src={selectedProject.image}
-                  alt={selectedProject.title}
-                  fill
-                  className="object-cover opacity-70"
-                  sizes="(max-width: 900px) 100vw, 42vw"
-                />
-              )}
-              <div className="project-modal-media-overlay" />
-            </div>
+            {selectedProject.link ? (
+              <a
+                href={selectedProject.link}
+                target="_blank"
+                rel="noreferrer"
+                className="project-modal-media project-modal-media-link"
+                aria-label={`Open ${selectedProject.title} website`}
+              >
+                {mediaContent}
+              </a>
+            ) : (
+              <div className="project-modal-media">
+                {mediaContent}
+              </div>
+            )}
 
             <div className="project-modal-content">
               <div className="flex flex-wrap items-center gap-3 text-[11px] uppercase tracking-[0.08em] text-muted">
@@ -108,11 +129,21 @@ export default function ProjectsView() {
                 </p>
               </div>
 
-              <p className="max-w-[58ch] text-sm leading-7 text-white/82 max-md:leading-6">
-                {selectedProject.overview}
-              </p>
-
               <div className="project-modal-meta">
+                {selectedProject.link && (
+                  <div>
+                    <div className="project-modal-label">PROJECT LINK</div>
+                    <a
+                      href={selectedProject.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="project-modal-link"
+                    >
+                      {selectedProject.link}
+                    </a>
+                  </div>
+                )}
+
                 <div>
                   <div className="project-modal-label">STACK</div>
                   <div className="project-modal-tags">

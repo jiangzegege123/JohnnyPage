@@ -20,10 +20,10 @@ export default function ProjectCard({ project: p, onOpen }: Props) {
       </div>
 
       {/* Cover image */}
-      {p.image && (
+      {p.cardImage && (
         <div className="absolute inset-0 rounded-[12px] overflow-hidden pointer-events-none">
           <Image
-            src={p.image}
+            src={p.cardImage}
             alt={p.title}
             fill
             className="object-cover opacity-20"
