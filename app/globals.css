@@ -40,6 +40,37 @@ body {
   75%        { transform: translateY(5px)   translateX(2px);  }
 }
 
+@keyframes shatter {
+  0% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    filter: blur(0px);
+  }
+  35% {
+    opacity: 0.95;
+    transform: scale(1.04) rotate(-1deg);
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.82) rotate(6deg) translateY(12px);
+    filter: blur(8px);
+  }
+}
+
+@keyframes reappear {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(8px);
+    filter: blur(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0);
+  }
+}
+
 /* ─── Component classes ───────────────────────────────────────────────────── */
 
 /* Glass morphism card / panel */
@@ -197,6 +228,14 @@ body.project-detail-open .portfolio-navbar .nav-pill {
   display: flex;
   align-items: center;
   white-space: nowrap;
+}
+
+.floating-label-shatter {
+  animation: shatter 420ms cubic-bezier(0.2, 0.8, 0.2, 1) forwards !important;
+}
+
+.floating-label-return {
+  animation: reappear 360ms cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
 }
 
 /* ─── Projects view ──────────────────────────────────────────────────────── */
