@@ -105,6 +105,29 @@ body {
   position: relative;
 }
 
+.portfolio-navbar,
+.portfolio-navbar .nav-pill,
+.portfolio-navbar .nav-item,
+.portfolio-navbar .nav-indicator {
+  transition:
+    opacity 0.25s ease,
+    filter 0.25s ease,
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+body.project-detail-open .portfolio-navbar {
+  opacity: 0.22;
+  filter: saturate(0.6);
+}
+
+body.project-detail-open .portfolio-navbar .nav-pill {
+  background: rgba(20, 20, 22, 0.32);
+  border-color: rgba(255, 255, 255, 0.04);
+}
+
 .nav-item {
   padding: 8px 20px;
   font-size: 11px;
@@ -327,6 +350,7 @@ body {
 }
 
 .project-modal-content {
+  min-height: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -414,10 +438,15 @@ body {
 .project-modal-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   color: rgba(255, 255, 255, 0.82);
   font-size: 13px;
   line-height: 1.7;
+}
+
+.project-modal-list strong {
+  color: #fff;
+  font-weight: 700;
 }
 
 @media (max-width: 900px) {

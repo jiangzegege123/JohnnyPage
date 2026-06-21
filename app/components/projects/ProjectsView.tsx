@@ -44,13 +44,16 @@ export default function ProjectsView() {
 
   useEffect(() => {
     if (!selectedProject) {
+      document.body.classList.remove("project-detail-open");
       return;
     }
 
+    document.body.classList.add("project-detail-open");
     document.body.style.overflow = "hidden";
     window.addEventListener("keydown", handleEscape);
 
     return () => {
+      document.body.classList.remove("project-detail-open");
       document.body.style.overflow = "";
       window.removeEventListener("keydown", handleEscape);
     };
@@ -159,7 +162,10 @@ export default function ProjectsView() {
                   <div className="project-modal-label">DETAILS</div>
                   <div className="project-modal-list">
                     {selectedProject.highlights.map((item) => (
-                      <p key={item}>{item}</p>
+                      <p key={`${item.emphasis}-${item.text}`}>
+                        <strong>{item.emphasis}</strong>{" "}
+                        <span>{item.text}</span>
+                      </p>
                     ))}
                   </div>
                 </div>

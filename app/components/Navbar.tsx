@@ -37,7 +37,7 @@ export default function Navbar({ items, activeView, onViewChange }: Props) {
   }, [activeView, items]);
 
   return (
-    <nav className="absolute bottom-10 w-full flex justify-center pointer-events-auto">
+    <nav className="portfolio-navbar absolute bottom-10 w-full flex justify-center pointer-events-auto">
       <div className="nav-pill" ref={pillRef}>
         <div
           className="nav-indicator"
