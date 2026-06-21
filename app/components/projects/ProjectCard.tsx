@@ -3,11 +3,17 @@ import { type Project } from "../../data/projects";
 
 interface Props {
   project: Project;
+  onOpen: (project: Project) => void;
 }
 
-export default function ProjectCard({ project: p }: Props) {
+export default function ProjectCard({ project: p, onOpen }: Props) {
   return (
-    <div className="glass-panel project-card">
+    <button
+      type="button"
+      className="glass-panel project-card text-left"
+      onClick={() => onOpen(p)}
+      aria-label={`Open details for ${p.title}`}
+    >
       {/* Ghost number watermark */}
       <div className="absolute -top-5 -right-5 text-[120px] font-black text-white/[0.02] leading-none pointer-events-none select-none">
         {p.num}
@@ -36,12 +42,15 @@ export default function ProjectCard({ project: p }: Props) {
         <h3 className="text-xl font-extrabold tracking-[-0.02em] mb-2 text-white">
           {p.title}
         </h3>
-        <div className="text-[10px] text-muted flex gap-3">
+        <p className="mb-3 max-w-[24ch] text-sm leading-relaxed text-white/75">
+          {p.tagline}
+        </p>
+        <div className="project-card-stack text-[10px] text-muted">
           {p.stack.map((s) => (
             <span key={s} className="square-bullet">{s}</span>
           ))}
         </div>
       </div>
-    </div>
+    </button>
   );
 }
