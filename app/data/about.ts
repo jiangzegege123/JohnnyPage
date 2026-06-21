@@ -39,7 +39,7 @@ export const ABOUT_SECTIONS: AboutSection[] = [
 
 export const CONTACT_LINKS: ContactLink[] = [
   { platform: "GitHub",    href: "https://github.com/jiangzegege123",       icon: "github"    },
-  { platform: "LinkedIn",  href: "https://linkedin.com/in/johnnyzhou",     icon: "linkedin"  },
+  { platform: "LinkedIn",  href: "https://www.linkedin.com/in/johnnyzhou0416/", icon: "linkedin"  },
   { platform: "Instagram", href: "https://www.instagram.com/johnny____zhou/", icon: "instagram" },
   { platform: "Email",     href: "mailto:zhoujiangze417@gmail.com",        icon: "email"     },
 ];

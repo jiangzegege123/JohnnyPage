@@ -450,8 +450,7 @@ body.project-detail-open .portfolio-navbar .nav-pill {
 }
 
 .project-modal-link {
-  display: inline-flex;
-  align-items: center;
+  display: inline-block;
   max-width: 100%;
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   padding-bottom: 3px;
@@ -460,6 +459,16 @@ body.project-detail-open .portfolio-navbar .nav-pill {
   line-height: 1.6;
   word-break: break-word;
   transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.project-modal-link-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project-modal-link strong {
+  margin-right: 6px;
 }
 
 .project-modal-link:hover {

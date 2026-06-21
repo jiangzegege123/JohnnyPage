@@ -28,7 +28,7 @@ export default function ProjectsView() {
         sizes="(max-width: 900px) 100vw, 42vw"
       />
       <div className="project-modal-media-overlay" />
-      {selectedProject.link && (
+      {selectedProject.mediaLink && (
         <div className="project-modal-media-hint">OPEN SITE</div>
       )}
     </>
@@ -97,9 +97,9 @@ export default function ProjectsView() {
               CLOSE
             </button>
 
-            {selectedProject.link ? (
+            {selectedProject.mediaLink ? (
               <a
-                href={selectedProject.link}
+                href={selectedProject.mediaLink}
                 target="_blank"
                 rel="noreferrer"
                 className="project-modal-media project-modal-media-link"
@@ -134,17 +134,23 @@ export default function ProjectsView() {
                 </div>
 
                 <div className="project-modal-meta">
-                  {selectedProject.link && (
+                  {selectedProject.links && selectedProject.links.length > 0 && (
                     <div>
-                      <div className="project-modal-label">COMPANY LINK</div>
-                      <a
-                        href={selectedProject.link}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="project-modal-link"
-                      >
-                        {selectedProject.link}
-                      </a>
+                      <div className="project-modal-label">LINKS</div>
+                      <div className="project-modal-link-list">
+                        {selectedProject.links.map((item) => (
+                          <a
+                            key={`${item.label}-${item.url}`}
+                            href={item.url}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="project-modal-link"
+                          >
+                            <strong>{item.label}:</strong>
+                            <span>{item.url}</span>
+                          </a>
+                        ))}
+                      </div>
                     </div>
                   )}
 

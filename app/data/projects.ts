@@ -3,6 +3,11 @@ export interface ProjectHighlight {
   text: string;
 }
 
+export interface ProjectLink {
+  label: string;
+  url: string;
+}
+
 export interface Project {
   num:   string;
   env:   string;
@@ -11,7 +16,8 @@ export interface Project {
   tagline: string;
   highlights: ProjectHighlight[];
   stack: string[];
-  link?: string;
+  links?: ProjectLink[];
+  mediaLink?: string;
   cardImage?: string; // path relative to /public
   detailImage?: string; // path relative to /public
 }
@@ -66,32 +72,42 @@ export const PROJECTS: Project[] = [
       },
     ],
     stack: ["NEXT.JS", "REACT", "TYPESCRIPT", "PLAYWRIGHT", "SPRING BOOT", "AWS"],
-    link: "https://www.quarrylink.com.au/",
+    links: [
+      { label: "Company Site", url: "https://www.quarrylink.com.au/" },
+    ],
+    mediaLink: "https://www.quarrylink.com.au/",
     detailImage: "/images/quarrylink-detail.png",
   },
   {
     num:   "02",
-    env:   "STAGING",
-    date:  "2024.08",
-    title: "Neural Net Viz",
-    tagline: "Interactive model graph explorer for debugging training flows.",
+    env:   "FULL_STACK_PLATFORM",
+    date:  "2025",
+    title: "PetBoard",
+    tagline: "Full-stack pet boarding management platform for bookings, pets, invoices, and operations.",
     highlights: [
       {
-        emphasis: "Network graph mapping:",
-        text: "Mapped network layers and dependencies into a navigable visual graph.",
+        emphasis: "Operational workflow platform:",
+        text: "Built a pet boarding management system covering customers, pet profiles, bookings, check-in and check-out status, invoices, and dashboard-level operational metrics.",
       },
       {
-        emphasis: "Activation overlays:",
-        text: "Added activation overlays to compare input behavior across checkpoints.",
+        emphasis: "Modern typed frontend stack:",
+        text: "Implemented the frontend with Next.js 16, React 19, TypeScript, Tailwind CSS 4, and a component stack based on shadcn/ui, Radix UI, TanStack Query, TanStack Table, React Hook Form, Zod, and Zustand.",
       },
       {
-        emphasis: "Focused model inspection:",
-        text: "Created focused inspection panels for weights, metrics, and anomalies.",
+        emphasis: "Spring Boot service architecture:",
+        text: "Backed the platform with Java 21, Spring Boot, Spring Data JPA, PostgreSQL, Liquibase, and OpenAPI-driven backend APIs for business workflows and data management.",
+      },
+      {
+        emphasis: "Cloud deployment foundation:",
+        text: "Containerized the system with Docker and Docker Compose, then provisioned AWS infrastructure with Terraform targeting ECS Fargate, ALB, RDS PostgreSQL, Secrets Manager, CloudWatch Logs, and GitHub OIDC.",
       },
     ],
-    stack: ["D3.JS", "WEBGL"],
-    cardImage: "/images/neural-net-viz.png",
-    detailImage: "/images/neural-net-viz.png",
+    stack: ["NEXT.JS", "REACT", "TYPESCRIPT", "SPRING BOOT", "POSTGRESQL", "AWS"],
+    links: [
+      { label: "Frontend Repo", url: "https://github.com/jiangzegege123/petboard-next" },
+      { label: "Backend Repo", url: "https://github.com/jiangzegege123/petboard-service" },
+    ],
+    detailImage: "/images/petboard-detail.png",
   },
   {
     num:   "03",
