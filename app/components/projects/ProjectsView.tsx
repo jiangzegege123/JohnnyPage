@@ -114,59 +114,61 @@ export default function ProjectsView() {
             )}
 
             <div className="project-modal-content">
-              <div className="flex flex-wrap items-center gap-3 text-[11px] uppercase tracking-[0.08em] text-muted">
-                <span>{selectedProject.env}</span>
-                <span className="h-1 w-1 rounded-full bg-white/25" />
-                <span>{selectedProject.date}</span>
-              </div>
-
-              <div className="space-y-3">
-                <h2
-                  id="project-detail-title"
-                  className="text-3xl font-black tracking-[-0.04em] text-white max-md:text-2xl"
-                >
-                  {selectedProject.title}
-                </h2>
-                <p className="max-w-[48ch] text-base leading-relaxed text-white/78 max-md:text-sm">
-                  {selectedProject.tagline}
-                </p>
-              </div>
-
-              <div className="project-modal-meta">
-                {selectedProject.link && (
-                  <div>
-                    <div className="project-modal-label">PROJECT LINK</div>
-                    <a
-                      href={selectedProject.link}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="project-modal-link"
-                    >
-                      {selectedProject.link}
-                    </a>
-                  </div>
-                )}
-
-                <div>
-                  <div className="project-modal-label">STACK</div>
-                  <div className="project-modal-tags">
-                    {selectedProject.stack.map((item) => (
-                      <span key={item} className="project-modal-chip">
-                        {item}
-                      </span>
-                    ))}
-                  </div>
+              <div className="project-modal-scroll">
+                <div className="flex flex-wrap items-center gap-3 text-[11px] uppercase tracking-[0.08em] text-muted">
+                  <span>{selectedProject.env}</span>
+                  <span className="h-1 w-1 rounded-full bg-white/25" />
+                  <span>{selectedProject.date}</span>
                 </div>
 
-                <div>
-                  <div className="project-modal-label">DETAILS</div>
-                  <div className="project-modal-list">
-                    {selectedProject.highlights.map((item) => (
-                      <p key={`${item.emphasis}-${item.text}`}>
-                        <strong>{item.emphasis}</strong>{" "}
-                        <span>{item.text}</span>
-                      </p>
-                    ))}
+                <div className="space-y-3">
+                  <h2
+                    id="project-detail-title"
+                    className="text-3xl font-black tracking-[-0.04em] text-white max-md:text-2xl"
+                  >
+                    {selectedProject.title}
+                  </h2>
+                  <p className="max-w-[48ch] text-base leading-relaxed text-white/78 max-md:text-sm">
+                    {selectedProject.tagline}
+                  </p>
+                </div>
+
+                <div className="project-modal-meta">
+                  {selectedProject.link && (
+                    <div>
+                      <div className="project-modal-label">COMPANY LINK</div>
+                      <a
+                        href={selectedProject.link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="project-modal-link"
+                      >
+                        {selectedProject.link}
+                      </a>
+                    </div>
+                  )}
+
+                  <div>
+                    <div className="project-modal-label">STACK</div>
+                    <div className="project-modal-tags">
+                      {selectedProject.stack.map((item) => (
+                        <span key={item} className="project-modal-chip">
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <div className="project-modal-label">DETAILS</div>
+                    <div className="project-modal-list">
+                      {selectedProject.highlights.map((item) => (
+                        <p key={`${item.emphasis}-${item.text}`}>
+                          <strong>{item.emphasis}</strong>{" "}
+                          <span>{item.text}</span>
+                        </p>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>

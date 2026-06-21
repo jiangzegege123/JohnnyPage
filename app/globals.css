@@ -298,8 +298,8 @@ body.project-detail-open .portfolio-navbar .nav-pill {
 
 .project-modal {
   width: min(1080px, 100%);
-  min-height: min(680px, 100%);
-  max-height: 100%;
+  height: min(680px, calc(100svh - 17vh));
+  max-height: calc(100svh - 17vh);
   display: grid;
   grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
   overflow: hidden;
@@ -353,13 +353,23 @@ body.project-detail-open .portfolio-navbar .nav-pill {
   min-height: 0;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  gap: 24px;
   padding: 48px;
-  max-height: 100%;
-  overflow-y: auto;
+  height: 100%;
+  overflow: hidden;
   background:
     linear-gradient(180deg, rgba(22, 22, 25, 0.88), rgba(10, 10, 12, 0.92));
+}
+
+.project-modal-scroll {
+  min-height: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 24px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-right: 10px;
 }
 
 .project-modal-close {
@@ -452,12 +462,20 @@ body.project-detail-open .portfolio-navbar .nav-pill {
 @media (max-width: 900px) {
   .project-modal {
     grid-template-columns: 1fr;
+    height: auto;
+    max-height: calc(100svh - 22vh);
     overflow-y: auto;
   }
 
   .project-modal-content {
     padding: 28px 24px 24px;
+    height: auto;
+  }
+
+  .project-modal-scroll {
+    height: auto;
     overflow-y: visible;
+    padding-right: 0;
   }
 }
 
