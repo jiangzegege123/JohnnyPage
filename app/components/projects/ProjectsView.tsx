@@ -24,9 +24,18 @@ export default function ProjectsView() {
         src={selectedProject.detailImage}
         alt={selectedProject.title}
         fill
-        className="object-cover"
+        className={`object-cover ${selectedProject.detailImageMobile ? "max-[900px]:hidden" : ""}`}
         sizes="(max-width: 900px) 100vw, 42vw"
       />
+      {selectedProject.detailImageMobile && (
+        <Image
+          src={selectedProject.detailImageMobile}
+          alt={selectedProject.title}
+          fill
+          className="hidden object-cover max-[900px]:block"
+          sizes="100vw"
+        />
+      )}
       <div className="project-modal-media-overlay" />
       {selectedProject.mediaLink && (
         <div className="project-modal-media-hint">OPEN SITE</div>

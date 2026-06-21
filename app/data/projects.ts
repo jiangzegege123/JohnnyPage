@@ -20,6 +20,7 @@ export interface Project {
   mediaLink?: string;
   cardImage?: string; // path relative to /public
   detailImage?: string; // path relative to /public
+  detailImageMobile?: string; // path relative to /public
 }
 
 export const PROJECTS: Project[] = [
@@ -76,7 +77,8 @@ export const PROJECTS: Project[] = [
       { label: "Company Site", url: "https://www.quarrylink.com.au/" },
     ],
     mediaLink: "https://www.quarrylink.com.au/",
-    detailImage: "/images/quarrylink-detail.png",
+    detailImage: "/images/quarrylink-detail-portrait.png",
+    detailImageMobile: "/images/quarrylink-detail-landscape.png",
   },
   {
     num:   "02",
@@ -107,7 +109,8 @@ export const PROJECTS: Project[] = [
       { label: "Frontend Repo", url: "https://github.com/jiangzegege123/petboard-next" },
       { label: "Backend Repo", url: "https://github.com/jiangzegege123/petboard-service" },
     ],
-    detailImage: "/images/petboard-detail.png",
+    detailImage: "/images/petboard-detail-portrait.png",
+    detailImageMobile: "/images/petboard-detail-landscape.png",
   },
   {
     num:   "03",
