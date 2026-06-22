@@ -318,8 +318,13 @@ body.project-detail-open .portfolio-navbar .nav-pill {
 .project-card-tagline {
   display: -webkit-box;
   overflow: hidden;
+  white-space: pre-line;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+}
+
+.project-modal-tagline {
+  white-space: pre-line;
 }
 
 .project-card:hover {

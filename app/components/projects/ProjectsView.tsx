@@ -44,6 +44,7 @@ export default function ProjectsView() {
   ) : (
     <div className="project-modal-media-overlay" />
   );
+  const selectedTaglineLines = selectedProject?.tagline.split("\n") ?? [];
 
   const handleEscape = useEffectEvent((event: KeyboardEvent) => {
     if (event.key === "Escape") {
@@ -137,8 +138,13 @@ export default function ProjectsView() {
                   >
                     {selectedProject.title}
                   </h2>
-                  <p className="max-w-[48ch] text-base leading-relaxed text-white/78 max-md:text-sm">
-                    {selectedProject.tagline}
+                  <p className="project-modal-tagline max-w-[48ch] text-base leading-relaxed text-white/78 max-md:text-sm">
+                    {selectedTaglineLines.map((line, index) => (
+                      <span key={`${selectedProject.title}-tagline-${line}`}>
+                        {line}
+                        {index < selectedTaglineLines.length - 1 && <br />}
+                      </span>
+                    ))}
                   </p>
                 </div>
 

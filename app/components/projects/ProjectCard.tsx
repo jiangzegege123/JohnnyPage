@@ -7,6 +7,8 @@ interface Props {
 }
 
 export default function ProjectCard({ project: p, onOpen }: Props) {
+  const taglineLines = p.tagline.split("\n");
+
   return (
     <button
       type="button"
@@ -43,7 +45,12 @@ export default function ProjectCard({ project: p, onOpen }: Props) {
           {p.title}
         </h3>
         <p className="project-card-tagline mb-3 max-w-[24ch] text-sm leading-relaxed text-white/75">
-          {p.tagline}
+          {taglineLines.map((line, index) => (
+            <span key={`${p.title}-tagline-${line}`}>
+              {line}
+              {index < taglineLines.length - 1 && <br />}
+            </span>
+          ))}
         </p>
       </div>
 

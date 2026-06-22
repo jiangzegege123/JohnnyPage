@@ -29,7 +29,7 @@ export const PROJECTS: Project[] = [
     env:   "SAAS_PLATFORM",
     date:  "2026.03-2026.05",
     title: "QuarryLink",
-    tagline: "Customer-facing quarry operations SaaS built during a 12-week internship.",
+    tagline: "Company-owned quarry operations SaaS platform\nContributed to as part of the development team over a 12-month engagement.",
     highlights: [
       {
         emphasis: "Customer-facing SaaS feature delivery:",
