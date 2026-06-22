@@ -116,6 +116,43 @@ export const PROJECTS: Project[] = [
   },
   {
     num:   "03",
+    env:   "COMMERCIAL_PLATFORM",
+    date:  "2025.11-2026.02",
+    title: "Zendulge",
+    tagline: "Full-stack local services, deals, bookings, and payment platform built across separate React and Express applications.",
+    highlights: [
+      {
+        emphasis: "Commercial full-stack platform:",
+        text: "Contributed three months of development to an unreleased commercial local-services platform supporting customer deal discovery, bookings, payments, merchant operations, and superadmin workflows.",
+      },
+      {
+        emphasis: "Frontend feature delivery:",
+        text: "Developed and maintained React 19, TypeScript, Vite, Tailwind CSS 4, Radix UI, React Hook Form, Zod, Axios, and React Router 7 functionality across customer, merchant, onboarding, and admin user flows.",
+      },
+      {
+        emphasis: "Backend API integration:",
+        text: "Implemented and integrated Node.js, Express, TypeScript, MongoDB, and Mongoose REST APIs covering authentication, user management, business operations, deals, services, appointments, and platform administration.",
+      },
+      {
+        emphasis: "Payments, storage, and email:",
+        text: "Contributed to Stripe checkout and transaction workflows, AWS S3 file upload support, AWS SES automated email delivery, and related backend service-layer integration work.",
+      },
+      {
+        emphasis: "Multi-role product workflows:",
+        text: "Worked across Customer, Business Owner, Manager, Employee, and Superadmin roles, including merchant onboarding, business review, service and deal management, appointments, customers, categories, platform revenue, backups, and feature flags.",
+      },
+      {
+        emphasis: "Engineering quality and delivery:",
+        text: "Built reusable UI components, validation logic, API service layers, and data models while participating in debugging, testing, code reviews, Agile sprint activities, GitHub Actions CI/CD work, and Docker-based development workflows.",
+      },
+    ],
+    stack: ["REACT", "TYPESCRIPT", "NODE.JS", "EXPRESS", "MONGODB", "STRIPE", "AWS", "VITE"],
+    cardImage: "/images/zendulge-card.png",
+    detailImage: "/images/zendulge-detail-portrait.png",
+    detailImageMobile: "/images/zendulge-detail-landscape.png",
+  },
+  {
+    num:   "04",
     env:   "PERSONAL_PORTFOLIO",
     date:  "2026.02-PRESENT",
     title: "JohnnyPage",
@@ -135,7 +172,7 @@ export const PROJECTS: Project[] = [
       },
       {
         emphasis: "Modern frontend foundation:",
-        text: "Built the app with Next.js 16, React 19, TypeScript, Tailwind CSS 4, and modular client components for navigation, animated labels, and view-specific UI blocks.",
+        text: "Built the app with Next.js 16, React 19, TypeScript, Tailwind CSS 4, Three.js, and modular client components for navigation, animated labels, and view-specific UI blocks.",
       },
     ],
     stack: ["NEXT.JS", "REACT", "TYPESCRIPT", "TAILWIND", "THREE.JS"],
@@ -145,29 +182,5 @@ export const PROJECTS: Project[] = [
     cardImage: "/images/johnnypage-detail-landscape.png",
     detailImage: "/images/johnnypage-detail-portrait.png",
     detailImageMobile: "/images/johnnypage-detail-landscape.png",
-  },
-  {
-    num:   "04",
-    env:   "ARCHIVE",
-    date:  "2023.11",
-    title: "Asset Pipeline",
-    tagline: "Automation layer for media processing and cloud delivery.",
-    highlights: [
-      {
-        emphasis: "Automated processing flow:",
-        text: "Automated ingest, validation, transformation, and publishing steps.",
-      },
-      {
-        emphasis: "Environment-aware deployment:",
-        text: "Added environment-aware deployment rules for shared cloud storage.",
-      },
-      {
-        emphasis: "Job observability:",
-        text: "Improved observability around failed jobs and retry behavior.",
-      },
-    ],
-    stack: ["PYTHON", "AWS"],
-    cardImage: "/images/asset-pipeline.png",
-    detailImage: "/images/asset-pipeline.png",
   },
 ];
