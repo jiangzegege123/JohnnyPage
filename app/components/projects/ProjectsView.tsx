@@ -169,6 +169,52 @@ export default function ProjectsView() {
                     </div>
                   )}
 
+                  {selectedProject.references && selectedProject.references.length > 0 && (
+                    <div>
+                      <div className="project-modal-label">REFERENCES</div>
+                      <div className="project-reference-list">
+                        {selectedProject.references.map((reference) => (
+                          <div key={reference.email} className="project-reference-item">
+                            {reference.avatar ? (
+                              <Image
+                                src={reference.avatar}
+                                alt={reference.name}
+                                width={48}
+                                height={48}
+                                className="project-reference-avatar"
+                              />
+                            ) : (
+                              <div className="project-reference-avatar project-reference-initials">
+                                {reference.name
+                                  .split(" ")
+                                  .map((part) => part[0])
+                                  .join("")
+                                  .slice(0, 2)}
+                              </div>
+                            )}
+                            <div className="project-reference-content">
+                              <a
+                                href={reference.linkedin}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="project-reference-name"
+                              >
+                                {reference.name}
+                              </a>
+                              <div className="project-reference-role">{reference.role}</div>
+                              <a
+                                href={`mailto:${reference.email}`}
+                                className="project-reference-email"
+                              >
+                                {reference.email}
+                              </a>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
                   <div>
                     <div className="project-modal-label">STACK</div>
                     <div className="project-modal-tags">

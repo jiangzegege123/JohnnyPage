@@ -8,6 +8,14 @@ export interface ProjectLink {
   url: string;
 }
 
+export interface ProjectReference {
+  name: string;
+  role: string;
+  email: string;
+  linkedin: string;
+  avatar?: string;
+}
+
 export interface Project {
   num:   string;
   env:   string;
@@ -17,6 +25,7 @@ export interface Project {
   highlights: ProjectHighlight[];
   stack: string[];
   links?: ProjectLink[];
+  references?: ProjectReference[];
   mediaLink?: string;
   cardImage?: string; // path relative to /public
   detailImage?: string; // path relative to /public
@@ -75,6 +84,22 @@ export const PROJECTS: Project[] = [
     stack: ["NEXT.JS", "REACT", "TYPESCRIPT", "PLAYWRIGHT", "SPRING BOOT", "AWS"],
     links: [
       { label: "Company Site", url: "https://www.quarrylink.com.au/" },
+    ],
+    references: [
+      {
+        name: "Rebecca Kennedy",
+        role: "Senior Product Manager",
+        email: "rebecca.kennedy@socoro.com.au",
+        linkedin: "https://www.linkedin.com/in/rebken/",
+        avatar: "/images/reference-rebecca-kennedy.jpg",
+      },
+      {
+        name: "Charlie Peng",
+        role: "Frontend Developer / Mentor",
+        email: "Charlie.Peng@socoro.com.au",
+        linkedin: "https://www.linkedin.com/in/linyi-peng/",
+        avatar: "/images/reference-charlie-peng.jpg",
+      },
     ],
     mediaLink: "https://www.quarrylink.com.au/",
     cardImage: "/images/quarrylink-card.png",
@@ -147,6 +172,15 @@ export const PROJECTS: Project[] = [
       },
     ],
     stack: ["REACT", "TYPESCRIPT", "NODE.JS", "EXPRESS", "MONGODB", "STRIPE", "AWS", "VITE"],
+    references: [
+      {
+        name: "Kitman Yiu",
+        role: "Tech Lead",
+        email: "kitmanwork@gmail.com",
+        linkedin: "https://www.linkedin.com/in/kitman-yiu/",
+        avatar: "/images/reference-kitman-yiu.jpg",
+      },
+    ],
     cardImage: "/images/zendulge-card.png",
     detailImage: "/images/zendulge-detail-portrait.png",
     detailImageMobile: "/images/zendulge-detail-landscape.png",
