@@ -132,9 +132,11 @@ export const PROJECTS: Project[] = [
     ],
     stack: ["NEXT.JS", "REACT", "TYPESCRIPT", "SPRING BOOT", "POSTGRESQL", "AWS"],
     links: [
+      { label: "Live Demo", url: "http://petboard-frontend-522604830267.s3-website-ap-southeast-2.amazonaws.com/dashboard/" },
       { label: "Frontend Repo", url: "https://github.com/jiangzegege123/petboard-next" },
       { label: "Backend Repo", url: "https://github.com/jiangzegege123/petboard-service" },
     ],
+    mediaLink: "http://petboard-frontend-522604830267.s3-website-ap-southeast-2.amazonaws.com/dashboard/",
     cardImage: "/images/petboard-card.png",
     detailImage: "/images/petboard-detail-portrait.png",
     detailImageMobile: "/images/petboard-detail-landscape.png",
